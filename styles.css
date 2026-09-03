@@ -1,0 +1,69 @@
+
+/* Overlay container */
+#cdim-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647; /* on top of everything */
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+/* Viewer box */
+#cdim-viewer {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  cursor: grab;
+}
+
+/* The magnified image */
+#cdim-img {
+  user-select: none;
+  -webkit-user-drag: none;
+  transform-origin: 0 0;
+  will-change: transform;
+  display: block;
+}
+
+/* Top bar */
+#cdim-topbar {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+#cdim-badge {
+  pointer-events: auto;
+  font: 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: #eaeaea;
+  background: rgba(0,0,0,0.55);
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+#cdim-close {
+  pointer-events: auto;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font: 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+#cdim-close:hover {
+  background: rgba(255,255,255,0.2);
+}
